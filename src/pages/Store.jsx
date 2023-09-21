@@ -36,7 +36,14 @@ const handleClick = (obj) => {
     }
   return (
     <div>
-        <ProductsArea>
+        <div>
+        <label><h1>Escolha os produtos que deseja comprar abaixo</h1></label>
+        <br></br>
+        <br></br>
+        <br></br>
+      </div>
+      
+        <ProductsArea style={{marginBottom:'0px'}}>
             {
             data.map((e) => (
                 <div key={e.id}>

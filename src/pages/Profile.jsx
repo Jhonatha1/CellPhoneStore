@@ -30,6 +30,7 @@ const TextoBotaoProfileEdit = styled.div`
   color: black;
   text-align: center;
   font-family: baskerville old face;
+  
 `;
 
 const ImagemPerfil = styled.img`
@@ -40,9 +41,13 @@ const ImagemPerfil = styled.img`
 
 const ProfileContainer = styled.div`
   display: flex;
-  align-items: center; 
-
+  align-items: center;
+  background: linear-gradient(to right, #0000, #539980);
+  margin-top: -86px;
+  padding: 20px;
+  min-height: 50vh;
 `;
+
 
 const LeftContent = styled.div`
   flex: 1 ; /* Ocupa o espaço disponível restante */
@@ -68,7 +73,7 @@ export const Profile = (props) => {
   return (
     <div>
       <h1>Perfil do Usuário</h1>
-      <ProfileContainer>
+      <ProfileContainer style={{ marginBottom:'-100px'}}>
         <LeftContent>
           <h3>Olá {user.name || 'Usuário'}, essas são suas informações:</h3>
           <br /><br /><br />
@@ -83,19 +88,19 @@ export const Profile = (props) => {
       </ProfileContainer>
       <br /><br />
       
-      <button>
-      <Link to="/profile/edit">
-          <BotaoProfileEdit src={imagemBotaoProfile} alt="EditarPerfil" />
-          <TextoBotaoProfileEdit>Editar Perfil</TextoBotaoProfileEdit>
-          </Link>
-      </button>
-      <button>
-      <Link to="/inicial">
-          <BotaoSair src={imagemBotaoSair} alt="EditarPerfil" />
-          <TextoBotaoSair>Sair</TextoBotaoSair>
-          </Link>
-      </button>
-    </div>
+      <button style={{ marginBottom: '-80' }}>
+  <Link to="/profile/edit">
+    <BotaoProfileEdit src={imagemBotaoProfile} alt="EditarPerfil" />
+    <TextoBotaoProfileEdit>Editar Perfil</TextoBotaoProfileEdit>
+  </Link>
+</button>
+<button style={{ marginBottom: '-80' }}>
+  <Link to="/inicial">
+    <BotaoSair src={imagemBotaoSair} alt="EditarPerfil" />
+    <TextoBotaoSair>Sair</TextoBotaoSair>
+  </Link>
+</button>
+</div>
   );
 };
 

@@ -13,13 +13,9 @@ const HeaderArea = styled.header`
   background: linear-gradient(to right, #FF0000, #539980);
   padding: 20px;
   margin-bottom: 0;
+  
 `;
 
-const LinkWithoutSpacing = styled(Link)`
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-`;
 
 const Logo = styled.img`
   margin-right: 20px;
@@ -31,6 +27,7 @@ const CenteredContent = styled.div`
   align-items: center;
   margin-left: 220px;
   gap: 20px;
+  
 `;
 
 const BotaoCarrinho = styled.img`

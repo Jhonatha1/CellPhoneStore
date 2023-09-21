@@ -13,13 +13,16 @@ const PageLogin = styled.div`
   justify-content: center;
   flex-direction: column;
   font-family: 'baskerville old face';
+  background: linear-gradient(to right, #0000, #539980);
+  
 `;
 
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px; /* Adicione espaço acima do formulário */
+  margin-top: 20px; /* 
+  
 `;
 const BotaoLogin = styled.button`
   background: none;
