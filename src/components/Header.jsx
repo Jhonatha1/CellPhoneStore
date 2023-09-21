@@ -72,7 +72,8 @@ const TextoPerfil = styled.div`
 
 export const Header = () => {
   const user = getItem('user')
-  const name = user.name.split(' ')
+const name = user?.name || 'Nome de Usuário Desconhecido';
+
   return (
     <HeaderArea>
       <Logo src={imagemLogo} alt="logo" />
