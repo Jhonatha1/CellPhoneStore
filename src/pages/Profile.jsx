@@ -44,10 +44,10 @@ export const Profile = (props) => {
         <LeftContent>
           <h3>Olá {user.name || 'Usuário'}, essas são suas informações:</h3>
           <br /><br /><br />
-          <p>{`Nome de Usuário: ${user.name}`}</p>
-          <p>{`CPF: ${user.cpf}`}</p>
-          <p>{`E-mail do Usuário: ${user.email}`}</p>
-          <p>{`Saldo: R$ ${user.saldo}`}</p>
+          <p>{`Nome de Usuário: ${user.name}`|| 'Usuário'}</p>
+          <p>{`CPF: ${user.cpf}`|| 'CPF'}</p>
+          <p>{`E-mail do Usuário: ${user.email}`|| 'email@email.com'}</p>
+          <p>{`Saldo: R$ ${user.saldo}`|| 'saldo'}</p>
         </LeftContent>
         <RightContent>
           <ImagemPerfil src={user.img} alt="img-user" />
