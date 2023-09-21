@@ -27,7 +27,7 @@ export const FinishPayment = (props) => {
     <>{
         loading ? <Loading/> :(
             
-        user.saldo < price ?(
+        user && user.saldo < price ?(
             <div>
                 <span><MdCancel style={{fontSize:'45px', color:'red'}}/></span><p>Seu saldo é insuficiente!</p>
                 </div> ) :(
