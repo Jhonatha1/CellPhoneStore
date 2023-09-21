@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/CellPhoneStore/static/css/main.073c9b0a.css",
-    "main.js": "/CellPhoneStore/static/js/main.9f2bad72.js",
+    "main.js": "/CellPhoneStore/static/js/main.387e3ddc.js",
     "static/media/carrinho-vazio.png": "/CellPhoneStore/static/media/carrinho-vazio.f70a01629a82e2c4c310.png",
     "static/media/perfil.png": "/CellPhoneStore/static/media/perfil.ad2b92ef6f68d70be013.png",
     "static/media/loginRed.png": "/CellPhoneStore/static/media/loginRed.9a51c81c8e9bf030f3f3.png",
     "static/media/casa.png": "/CellPhoneStore/static/media/casa.5b877cb9b28ff68b580c.png",
     "index.html": "/CellPhoneStore/index.html",
     "main.073c9b0a.css.map": "/CellPhoneStore/static/css/main.073c9b0a.css.map",
-    "main.9f2bad72.js.map": "/CellPhoneStore/static/js/main.9f2bad72.js.map"
+    "main.387e3ddc.js.map": "/CellPhoneStore/static/js/main.387e3ddc.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.9f2bad72.js"
+    "static/js/main.387e3ddc.js"
   ]
 }
