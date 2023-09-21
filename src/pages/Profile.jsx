@@ -43,7 +43,7 @@ export const Profile = (props) => {
       <h1>Perfil do Usuário</h1>
       <ProfileContainer>
       <LeftContent>
-  <h3>Olá {user.name}, essas são suas informações:</h3>
+  <h3>Olá, essas são suas informações:</h3>
   <br /><br /><br />
   <div>
     <p>{`Nome de Usuário: ${user.name}`}</p>
