@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { getItem, setItem } from '../services/LocalStorageFuncs';
 
 export const ProfileEdit = (props) => {
-  // Verifica se o objeto 'user' existe no armazenamento local, caso contrário, cria um novo usuário.
   const user = getItem('user') || {
     name: '',
     email: '',
