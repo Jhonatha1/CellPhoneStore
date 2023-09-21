@@ -82,18 +82,17 @@ export const Profile = (props) => {
         </RightContent>
       </ProfileContainer>
       <br /><br />
+      
       <button>
-
-      <Link to="/inicial">
-          <BotaoSair src={imagemBotaoSair} alt="EditarPerfil" />
-          <TextoBotaoSair>Sair</TextoBotaoSair>
-          </Link>
-      </button>
-      <button>
-
       <Link to="/profile/edit">
           <BotaoProfileEdit src={imagemBotaoProfile} alt="EditarPerfil" />
           <TextoBotaoProfileEdit>Editar Perfil</TextoBotaoProfileEdit>
+          </Link>
+      </button>
+      <button>
+      <Link to="/inicial">
+          <BotaoSair src={imagemBotaoSair} alt="EditarPerfil" />
+          <TextoBotaoSair>Sair</TextoBotaoSair>
           </Link>
       </button>
     </div>
