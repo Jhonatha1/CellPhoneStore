@@ -1,8 +1,35 @@
 import React from 'react';
 import { getItem } from '../services/LocalStorageFuncs';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
+import imagemBotaoProfile from '../components/img/botao-editar.png';
+import imagemBotaoSair from '../components/img/sair.png';
 
+
+const BotaoSair = styled.img`
+  width: 40px;
+  height: 40px;
+  border:none;
+  background-color: none;
+  margin: 0 auto;
+`;
+const TextoBotaoSair = styled.div`
+  color: black;
+  text-align: center;
+  font-family: baskerville old face;
+`;
+const BotaoProfileEdit = styled.img`
+  width: 40px;
+  height: 40px;
+  border:none;
+
+`;
+const TextoBotaoProfileEdit = styled.div`
+  color: black;
+  text-align: center;
+  font-family: baskerville old face;
+`;
 
 const ImagemPerfil = styled.img`
   margin-left: 100px; /* Ajuste a margem conforme necessário */
@@ -54,13 +81,26 @@ export const Profile = (props) => {
         </RightContent>
       </ProfileContainer>
       <br /><br />
-      <button onClick={toProfileEdit}>
-        Editar Perfil
+      <button>
+
+      <Link to="/inicial">
+          <BotaoSair src={imagemBotaoSair} alt="EditarPerfil" />
+          <TextoBotaoSair>Sair</TextoBotaoSair>
+          </Link>
       </button>
-      <button onClick={() => props.history.push('/inicial')}>
-        Logout
+      <button>
+
+      <Link to="/profile/edit">
+          <BotaoProfileEdit src={imagemBotaoProfile} alt="EditarPerfil" />
+          <TextoBotaoProfileEdit>Editar Perfil</TextoBotaoProfileEdit>
+          </Link>
       </button>
     </div>
   );
 };
+
+
+
+
+
 
