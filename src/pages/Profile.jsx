@@ -42,14 +42,17 @@ export const Profile = (props) => {
     <div>
       <h1>Perfil do Usuário</h1>
       <ProfileContainer>
-        <LeftContent>
-          <h3>Olá {user.name}, essas são suas informações:</h3>
-          <br /><br /><br />
-          <p>{`Nome de Usuário: ${user.name}`}</p>
-          <p>{`CPF: ${user.cpf}`}</p>
-          <p>{`E-mail do Usuário: ${user.email}`}</p>
-          <p>{`Saldo: R$ ${user.saldo}`}</p>
-        </LeftContent>
+      <LeftContent>
+  <h3>Olá {user.name}, essas são suas informações:</h3>
+  <br /><br /><br />
+  <div>
+    <p>{`Nome de Usuário: ${user.name}`}</p>
+    <p>{`CPF: ${user.cpf}`}</p>
+    <p>{`E-mail do Usuário: ${user.email}`}</p>
+    <p>{`Saldo: R$ ${user.saldo}`}</p>
+  </div>
+</LeftContent>
+
         <RightContent>
           <ImagemPerfil src={user.img} alt="img-user" />
         </RightContent>
