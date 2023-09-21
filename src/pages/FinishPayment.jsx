@@ -21,11 +21,11 @@ export const FinishPayment = (props) => {
 
 
     const{params:{price}} = props.match
-    const user = getItem('user') || {};
+    const user = getItem('user')
   return (
     <>{
         loading ? <Loading/> :(
-            user && user.saldo < price ?(
+        user.saldo < price ?(
             <div>
                 <span><MdCancel style={{fontSize:'45px', color:'red'}}/></span><p>Seu saldo é insuficiente!</p></div>
         ) :(

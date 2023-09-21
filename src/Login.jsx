@@ -15,6 +15,12 @@ const PageLogin = styled.div`
   font-family: 'baskerville old face';
 `;
 
+const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Adicione espaço acima do formulário */
+`;
 const BotaoLogin = styled.button`
   background: none;
   border: none;
@@ -67,33 +73,34 @@ export const Login = (props) => {
 
   return (
     <PageLogin>
-  <h1>Bem-vindo à UltraCell, faça o login abaixo:</h1>
-  <form>
-    <p>
-      <b>Nome:</b>
-    </p>
-    <input
-      type="text"
-      onChange={({ target: { value } }) => setName(value)}
-      value={name}
-    />
-    <p>
-      <b>Senha:</b>
-    </p>
-    <input
-      type="password"
-      onChange={({ target: { value } }) => setPassword(value)}
-      value={password}
-    />
-    {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
-    <BotaoLogin onClick={() => saveUser(name, password)} disabled={!cond}>
-      <ImagemBotao src={imagemLogin} alt="Botão de Login" />
-      <TextoBotao>Login</TextoBotao>
-    </BotaoLogin>
-  </form>
-  <p>Não possui cadastro?</p>
-  <Link to="/newprofile">Clique aqui para se cadastrar</Link>
-</PageLogin>
-
+      <h1>Bem-vindo à UltraCell, faça o login abaixo:</h1>
+      <FormContainer>
+        <label>
+          <b>Nome:</b>
+        </label>
+        <input
+          type="text"
+          onChange={({ target: { value } }) => setName(value)}
+          value={name}
+        />
+  
+        <label>
+          <b>Senha:</b>
+        </label>
+        <input
+          type="password"
+          onChange={({ target: { value } }) => setPassword(value)}
+          value={password}
+        />
+  
+        {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+  
+        <BotaoLogin onClick={() => saveUser(name, password)} disabled={!cond}>
+          <ImagemBotao src={imagemLogin} alt="Botão de Login" />
+        </BotaoLogin>
+      </FormContainer>
+      <p>Não possui cadastro? </p>
+      <Link to="/newprofile">Clique aqui para se cadastrar</Link>
+    </PageLogin>
   );
-};
+  };
