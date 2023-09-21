@@ -12,12 +12,9 @@ export const ProfileEdit = (props) => {
     saldo: '',
   };
 
-  const [name, setName] = useState(user.name);
-  const [email, setEmail] = useState(user.email);
-  const [password, setPassword] = useState(user.password);
-  const [img, setImage] = useState(user.img);
-  const [cpf, setCpf] = useState(user.cpf);
-  const [saldo, setSaldo] = useState(user.saldo);
+  const [userData, setUserData] = useState(user);
+
+  const { name, email, password, img, cpf, saldo } = userData;
 
   const cond =
     name.length > 3 &&
@@ -28,8 +25,16 @@ export const ProfileEdit = (props) => {
     cpf.length === 11 &&
     saldo.length > 2;
 
+  const handleChange = (e, field) => {
+    const { value } = e.target;
+    setUserData((prevUserData) => ({
+      ...prevUserData,
+      [field]: value,
+    }));
+  };
+
   const saveChanges = () => {
-    setItem('user', { name, email, password, img, cpf, saldo });
+    setItem('user', userData);
     const {
       history: { push },
     } = props;
@@ -42,37 +47,37 @@ export const ProfileEdit = (props) => {
       <input
         type="text"
         value={name}
-        onChange={({ target: { value } }) => setName(value)}
+        onChange={(e) => handleChange(e, 'name')}
       />
       <p>E-mail:</p>
       <input
         type="email"
         value={email}
-        onChange={({ target: { value } }) => setEmail(value)}
+        onChange={(e) => handleChange(e, 'email')}
       />
       <p>Senha:</p>
       <input
         type="password"
         value={password}
-        onChange={({ target: { value } }) => setPassword(value)}
+        onChange={(e) => handleChange(e, 'password')}
       />
       <p>Image URL:</p>
       <input
         type="text"
         value={img}
-        onChange={({ target: { value } }) => setImage(value)}
+        onChange={(e) => handleChange(e, 'img')}
       />
       <p>CPF:</p>
       <input
         type="number"
         value={cpf}
-        onChange={({ target: { value } }) => setCpf(value)}
+        onChange={(e) => handleChange(e, 'cpf')}
       />
       <p>Saldo:</p>
       <input
         type="number"
         value={saldo}
-        onChange={({ target: { value } }) => setSaldo(value)}
+        onChange={(e) => handleChange(e, 'saldo')}
       />
       <br /> <br />
       <button disabled={!cond} onClick={saveChanges}>
