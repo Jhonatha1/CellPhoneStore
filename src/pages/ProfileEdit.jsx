@@ -2,16 +2,22 @@ import React, { useState } from 'react';
 import { getItem, setItem } from '../services/LocalStorageFuncs';
 
 export const ProfileEdit = (props) => {
-  // Verifica se o objeto 'user' existe, caso contrário, cria um objeto vazio.
-  const user = getItem('user') || {};
+  // Verifica se o objeto 'user' existe no armazenamento local, caso contrário, cria um novo usuário.
+  const user = getItem('user') || {
+    name: '',
+    email: '',
+    password: '',
+    img: '',
+    cpf: '',
+    saldo: '',
+  };
 
-  const [name, setName] = useState(user.name || '');
-  const [email, setEmail] = useState(user.email || '');
-  const [password, setPassword] = useState(user.password || '');
-  const [confirmpassword, setconfirmPassword] = useState(user.password || '');
-  const [img, setImage] = useState(user.img || '');
-  const [cpf, setCpf] = useState(user.cpf || '');
-  const [saldo, setSaldo] = useState(user.saldo || '');
+  const [name, setName] = useState(user.name);
+  const [email, setEmail] = useState(user.email);
+  const [password, setPassword] = useState(user.password);
+  const [img, setImage] = useState(user.img);
+  const [cpf, setCpf] = useState(user.cpf);
+  const [saldo, setSaldo] = useState(user.saldo);
 
   const cond =
     name.length > 3 &&
