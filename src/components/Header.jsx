@@ -68,7 +68,7 @@ const TextoPerfil = styled.div`
 
 export const Header = () => {
   const user = getItem('user');
-  const name = user ? user.name.split(' ') : [];
+  const name = user?.name?.split(' ') || [];
 
   return (
     <HeaderArea>
