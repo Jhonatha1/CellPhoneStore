@@ -30,7 +30,8 @@ const RightContent = styled.div`
 `;
 
 export const Profile = (props) => {
-  const user = getItem('user');
+  const user = getItem('user') ?? { name: '' };
+
 
   const toProfileEdit = () => {
     const { history: { push } } = props;
