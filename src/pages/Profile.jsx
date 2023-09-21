@@ -30,7 +30,7 @@ const RightContent = styled.div`
 `;
 
 export const Profile = (props) => {
-  const user = getItem('user') || { name: '' }; // Fornecer um valor padrão
+  const user = getItem('user') || { name: '', cpf: '', email: '', saldo: '', img: '' };
 
   const toProfileEdit = () => {
     const { history: { push } } = props;
@@ -45,9 +45,9 @@ export const Profile = (props) => {
           <h3>Olá {user.name || 'Usuário'}, essas são suas informações:</h3>
           <br /><br /><br />
           <p>{`Nome de Usuário: ${user.name}`}</p>
-          <p>{`CPF: ${user.cpf || 'N/A'}`}</p>
-          <p>{`E-mail do Usuário: ${user.email || 'N/A'}`}</p>
-          <p>{`Saldo: R$ ${user.saldo || 'N/A'}`}</p>
+          <p>{`CPF: ${user.cpf}`}</p>
+          <p>{`E-mail do Usuário: ${user.email}`}</p>
+          <p>{`Saldo: R$ ${user.saldo}`}</p>
         </LeftContent>
         <RightContent>
           <ImagemPerfil src={user.img} alt="img-user" />
@@ -63,3 +63,4 @@ export const Profile = (props) => {
     </div>
   );
 };
+
