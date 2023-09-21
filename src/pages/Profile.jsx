@@ -57,7 +57,7 @@ export const Profile = (props) => {
       <button onClick={toProfileEdit}>
         Editar Perfil
       </button>
-      <button onClick={() => props.history.push('/')}>
+      <button onClick={() => props.history.push('/inicial')}>
         Logout
       </button>
     </div>
