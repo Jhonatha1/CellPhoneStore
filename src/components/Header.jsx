@@ -72,7 +72,8 @@ const TextoPerfil = styled.div`
 
 export const Header = () => {
   const user = getItem('user')
-const name = user?.name || 'Nome de Usuário Desconhecido';
+  const name = user && user.name ? user.name : '';
+  
 
   return (
     <HeaderArea>
