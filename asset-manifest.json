@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/CellPhoneStore/static/css/main.e6c13ad2.css",
-    "main.js": "/CellPhoneStore/static/js/main.27981fef.js",
+    "main.css": "/CellPhoneStore/static/css/main.073c9b0a.css",
+    "main.js": "/CellPhoneStore/static/js/main.91551ab3.js",
     "static/media/carrinho-vazio.png": "/CellPhoneStore/static/media/carrinho-vazio.f70a01629a82e2c4c310.png",
     "static/media/perfil.png": "/CellPhoneStore/static/media/perfil.ad2b92ef6f68d70be013.png",
     "static/media/loginRed.png": "/CellPhoneStore/static/media/loginRed.9a51c81c8e9bf030f3f3.png",
     "static/media/casa.png": "/CellPhoneStore/static/media/casa.5b877cb9b28ff68b580c.png",
     "index.html": "/CellPhoneStore/index.html",
-    "main.e6c13ad2.css.map": "/CellPhoneStore/static/css/main.e6c13ad2.css.map",
-    "main.27981fef.js.map": "/CellPhoneStore/static/js/main.27981fef.js.map"
+    "main.073c9b0a.css.map": "/CellPhoneStore/static/css/main.073c9b0a.css.map",
+    "main.91551ab3.js.map": "/CellPhoneStore/static/js/main.91551ab3.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.27981fef.js"
+    "static/css/main.073c9b0a.css",
+    "static/js/main.91551ab3.js"
   ]
 }
