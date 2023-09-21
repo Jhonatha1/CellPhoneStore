@@ -18,6 +18,7 @@ const TextoBotaoSair = styled.div`
   color: black;
   text-align: center;
   font-family: baskerville old face;
+  border:none;
 `;
 const BotaoProfileEdit = styled.img`
   width: 40px;
