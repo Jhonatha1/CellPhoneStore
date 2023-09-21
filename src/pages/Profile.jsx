@@ -2,7 +2,6 @@ import React from 'react';
 import { getItem } from '../services/LocalStorageFuncs';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Header } from '../components/Header';
 import imagemBotaoProfile from '../components/img/botao-editar.png';
 import imagemBotaoSair from '../components/img/sair.png';
 

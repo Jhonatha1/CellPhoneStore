@@ -23,7 +23,9 @@ export const ProductsArea = styled.div`
         flex-direction: column;
         align-items: center;
         padding: 20px;
+        background: linear-gradient(to right, black, white);
         margin: black 20px;
+        
 
         button{
             font-size:25px;
