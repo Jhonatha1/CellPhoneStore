@@ -48,7 +48,7 @@ const ErrorMessage = styled.div`
 `;
 
 export const Login = (props) => {
-  const user = getItem('user');
+  const user = getItem('user') || { name: '', password: '' };
   const [name, setName] = useState(user.name || '');
   const [password, setPassword] = useState(user.password || '');
   const [errorMessage, setErrorMessage] = useState('');
@@ -103,4 +103,4 @@ export const Login = (props) => {
       <Link to="/newprofile">Clique aqui para se cadastrar</Link>
     </PageLogin>
   );
-  };
+};
